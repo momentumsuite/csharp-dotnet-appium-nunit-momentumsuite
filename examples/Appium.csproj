@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Appium</RootNamespace>
+    <IsPackable>false</IsPackable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="NUnit" Version="3.13.3"/>
+    <PackageReference Include="NUnit3TestAdapter" Version="4.2.1"/>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.2.0"/>
+    <PackageReference Include="Microsoft.TestPlatform.TestHost" Version="17.2.0"/>
+    <PackageReference Include="Appium.WebDriver" Version="4.3.2"/>
+    <PackageReference Include="ReportUnit" Version="1.5.0-beta1"/>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1"/>
+    <PackageReference Include="Castle.Core" Version="5.0.0"/>
+    <Content Include="..\test_settings.json">
+      <Link>%(RecursiveDir)%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>
