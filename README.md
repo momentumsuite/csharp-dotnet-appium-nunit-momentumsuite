@@ -32,7 +32,7 @@ With a Momentum Suite account, You need 4 things to start without any Appium or 
   * **momentum:gw** Comma seperated Momentum Suite mobile device ID list (4 digit number) to run the test. First number will be your default phone for all except parallel-testing.
   * **appium:app** Your uploaded IPA, APK or AAB app file from Momentum Suite Application Library. Example format is ms://<hashed-app-id> Optionally you can use a public accessible web URL.
  
- Do not forget to set these 4 Appium capability values and check hostname, port, path and protocol values on your **testSettings.json** file.
+ Do not forget to set these 4 Appium capability values and check hostname, port, path and protocol values on your **test_settings.json** file.
 
 **Start with Android device:**
  Open for editing your test_settings.json file under [root directory](https://github.com/momentumsuite/csharp-dotnet-appium-nunit-momentumsuite/blob/main/test_settings.json).
@@ -49,7 +49,7 @@ With a Momentum Suite account, You need 4 things to start without any Appium or 
 
 
 **Start with iOS device:**
-Same with Android, but need to change testSettings.json file.
+Same with Android, but need to change test_settings.json file.
  
 Run the following command in project's base directory :
 ```
@@ -58,7 +58,7 @@ Run the following command in project's base directory :
 ```
 
 **Start with local testing:**
-Use Local testing that access resources hosted in your development or testing environments. You need to install Appium and it's all dependencies like Android SDK, Xcode, Command Line tools. At the same sime you will need to run a real device or simulator/emulator.  Do not forget to check hostname, port, path and protocol values on your testSettings.json file with your own Appium server.
+Use Local testing that access resources hosted in your development or testing environments. You need to install Appium and it's all dependencies like Android SDK, Xcode, Command Line tools. At the same sime you will need to run a real device or simulator/emulator.  Do not forget to check hostname, port, path and protocol values on your test_settings.json file with your own Appium server.
  
 Run the following command in project's base directory :
 ```
