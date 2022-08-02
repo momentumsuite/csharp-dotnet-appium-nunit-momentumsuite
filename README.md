@@ -4,14 +4,17 @@
 
 
 ## Supports
+  * Selenium v4 and Appium 2.0 (W3C)
   * Native or Hybrid Android and iOS apps (APK, AAB, IPA)
   * Local testing or using Momentum Suite's 150+ Android or iOS devices
+  * [Allure](https://docs.qameta.io/allure/) test report integration
   
   ## Setup
 
 **Requirements:**
 
 * .NET Core SDK 3.1  If you don't have it installed, download it from [here](https://dotnet.microsoft.com/en-us/download/dotnet/3.1).
+* Install the [Allure command-line tool](https://www.npmjs.com/package/allure-commandline) (required to process the results directory after test run)
 
 **Install the dependencies:**
 
@@ -68,6 +71,14 @@ dotnet test --filter AndroidLocalTest
 dotnet test --filter AndroidFirstTest
 dotnet test --filter IOSLocalTest
 dotnet test --filter IOSFirstTest
+```
+
+### Allure Reporting
+ 
+ Run the following command in project's base directory after test run has been completed. This command will open a browser window with HTML test results.
+```
+cd examples
+allure serve bin/Debug/netcoreapp3.1/allure-results
 ```
 
 ## Getting Help
