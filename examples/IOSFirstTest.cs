@@ -4,6 +4,9 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.Threading;
 using NUnit.Framework;
+using NUnit.Allure.Attributes;
+using NUnit.Allure.Core;
+using Allure.Commons;
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Appium.iOS;
@@ -16,6 +19,7 @@ using System.Collections.Generic;
 
 namespace Appium
 {
+    [AllureNUnit]
     [TestFixture]
 
     public class IOSFirstTest
