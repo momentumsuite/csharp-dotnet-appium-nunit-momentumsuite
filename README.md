@@ -35,15 +35,16 @@ With a Momentum Suite account, You need 4 things to start without any Appium or 
  Do not forget to set these 4 Appium capability values and check hostname, port, path and protocol values on your **testSettings.json** file.
 
 **Start with Android device:**
- Open for editing your testSettings.json file under [root directory](https://github.com/momentumsuite/csharp-dotnet-appium-nunit-momentumsuite/blob/main/testSettings.json).
+ Open for editing your test_settings.json file under [root directory](https://github.com/momentumsuite/csharp-dotnet-appium-nunit-momentumsuite/blob/main/test_settings.json).
  
- Set momentumUser, momentumToken, momentumDeviceList, momentumApp on testSettings.json file.
+ Set momentumUser, momentumToken, momentumDeviceList, momentumApp on test_settings.json file.
  
  Test script is available in examples directory
  
  Run the following command in project's base directory :
 ```
- mvn clean test -P android-first
+ cd examples
+ dotnet test --filter AndroidFirstTest
 ```
 
 
@@ -53,7 +54,7 @@ Same with Android, but need to change testSettings.json file.
 Run the following command in project's base directory :
 ```
  cd examples
- dotnet test --filter AndroidFirstTest
+ dotnet test --filter IOSFirstTest
 ```
 
 **Start with local testing:**
