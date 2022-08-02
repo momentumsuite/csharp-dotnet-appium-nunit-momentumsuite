@@ -53,7 +53,6 @@ namespace Appium
             momentumOptions.Add("token", momentumToken);
             momentumOptions.Add("gw", momentumDeviceId);
             caps.AddAdditionalCapability("momentum:options", momentumOptions);
-            //Console.WriteLine(caps);
             driver = new IOSDriver<AppiumWebElement>(new Uri(momentumHost), caps);
             Console.WriteLine("iOS First Test");
         }

@@ -40,7 +40,6 @@ namespace Appium
 
             AppiumOptions caps = new AppiumOptions();
             Dictionary<string, object> momentumOptions = new Dictionary<string, object>();
-            caps.AddAdditionalCapability("plarformName", "Android");
             caps.AddAdditionalCapability("appium:automationName", "UiAutomator2");
             caps.AddAdditionalCapability("appium:autoGrantPermissions", true);
             caps.AddAdditionalCapability("appium:language", "en");
@@ -54,7 +53,6 @@ namespace Appium
             momentumOptions.Add("token", momentumToken);
             momentumOptions.Add("gw", momentumDeviceId);
             caps.AddAdditionalCapability("momentum:options", momentumOptions);
-            //Console.WriteLine(caps);
             driver = new AndroidDriver<AppiumWebElement>(new Uri(momentumHost), caps);
             Console.WriteLine("Android First Test");
         }

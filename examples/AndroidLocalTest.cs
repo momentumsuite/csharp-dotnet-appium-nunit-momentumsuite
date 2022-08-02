@@ -34,7 +34,6 @@ namespace Appium
             var androidDevice = myJObject.SelectToken("$.LOCAL.android.deviceName").Value<string>();
 
             AppiumOptions caps = new AppiumOptions();
-            caps.AddAdditionalCapability("plarformName", "Android");
             caps.AddAdditionalCapability("appium:automationName", "UiAutomator2");
             caps.AddAdditionalCapability("appium:deviceName", androidDevice);
             caps.AddAdditionalCapability("appium:app", androidApp);
