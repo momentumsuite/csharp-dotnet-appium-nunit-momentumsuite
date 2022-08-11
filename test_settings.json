@@ -1,27 +1,27 @@
 {   
     "CLOUD" : {
-      "momentumUser": "<momentum-suite-username>",
-      "momentumToken": "<momentum-suite-access-key>",
-       "momentumHost": "http://momentumv2.mobven.com:8088/wd/hub",
+       "momentumUser"   : "<momentum-suite-username>",
+       "momentumToken"  : "<momentum-suite-access-key>",
+       "momentumHost"   : "http://console.momentumsuite.com/gateway/wd/hub/",
        "ios" : {
             "momentumApp": "ms://<hashed-app-id>",
             "momentumDeviceList": [9999]
         },
         "android" : {
           "momentumApp": "ms://<hashed-app-id>",
-            "momentumDeviceList": [9998]
+            "momentumDeviceList": [9999]
             }
     },
    
-   "LOCAL" : {
-       "host": "http://127.0.0.1:4723/wd/hub",
-       "ios" : {
-            "app": "https://momentumsuite.com/downloads/Calculator-v1.ipa",
-            "deviceName": "iPhone 13"
-        },
-        "android" : {
-            "app": "https://momentumsuite.com/downloads/My-Bank-Wallet-v1.apk",
-            "deviceName": "emulator-5554"
-        }
-    }       
+    "LOCAL" : {
+        "host": "http://127.0.0.1:4723/wd/hub",
+        "ios" : {
+             "app": "https://momentumsuite.com/downloads/sample.ipa",
+             "deviceName": "iPhone 13"
+         },
+         "android" : {
+             "app": "https://momentumsuite.com/downloads/sample.apk",
+             "deviceName": "emulator-5554"
+         }
+     }        
 }
