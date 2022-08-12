@@ -3,7 +3,6 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>Appium</RootNamespace>
     <IsPackable>false</IsPackable>
-    <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="NUnit" Version="3.13.3"/>

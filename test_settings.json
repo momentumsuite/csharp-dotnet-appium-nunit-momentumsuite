@@ -2,7 +2,7 @@
     "CLOUD" : {
        "momentumUser"   : "<momentum-suite-username>",
        "momentumToken"  : "<momentum-suite-access-key>",
-       "momentumHost"   : "http://console.momentumsuite.com/gateway/wd/hub/",
+       "momentumHost"   : "https://console.momentumsuite.com/gateway/wd/hub/",
        "ios" : {
             "momentumApp": "ms://<hashed-app-id>",
             "momentumDeviceList": [9999]
