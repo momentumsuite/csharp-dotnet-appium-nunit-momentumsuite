@@ -31,10 +31,12 @@ namespace Appium
         {
             var myJsonString = File.ReadAllText("test_settings.json"); 
             var myJObject = JObject.Parse(myJsonString);
+            long momentumIOSDeviceId;
             string momentumUser = myJObject.SelectToken("CLOUD.momentumUser").Value<string>();
             string momentumToken = myJObject.SelectToken("CLOUD.momentumToken").Value<string>();
             string momentumHost = myJObject.SelectToken("CLOUD.momentumHost").Value<string>();
             string momentumApp = myJObject.SelectToken("CLOUD.ios.momentumApp").Value<string>();
+            string remoteDebugProxy = myJObject.SelectToken("CLOUD.remoteDebugProxy").Value<string>(momentumIOSDeviceId + 2000);
             JArray momentumDeviceList = (JArray)myJObject["CLOUD"]["ios"]["momentumDeviceList"];
             JToken momentumDeviceId = momentumDeviceList[0];
 
@@ -44,6 +46,7 @@ namespace Appium
             caps.AddAdditionalCapability("appium:autoAcceptAlerts", true);
             caps.AddAdditionalCapability("appium:language", "en");
             caps.AddAdditionalCapability("appium:locale", "en");
+            caps.AddAdditionalCapability("appium:remoteDebugProxy", remoteDebugProxy);
             caps.AddAdditionalCapability("appium:deviceName", "");
             caps.AddAdditionalCapability("appium:udid", "");
             caps.AddAdditionalCapability("appium:app", momentumApp);
