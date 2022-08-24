@@ -31,12 +31,18 @@ namespace Appium
         {
             var myJsonString = File.ReadAllText("test_settings.json"); 
             var myJObject = JObject.Parse(myJsonString);
+        
+            
             string momentumUser = myJObject.SelectToken("CLOUD.momentumUser").Value<string>();
             string momentumToken = myJObject.SelectToken("CLOUD.momentumToken").Value<string>();
             string momentumHost = myJObject.SelectToken("CLOUD.momentumHost").Value<string>();
             string momentumApp = myJObject.SelectToken("CLOUD.ios.momentumApp").Value<string>();
             JArray momentumDeviceList = (JArray)myJObject["CLOUD"]["ios"]["momentumDeviceList"];
             JToken momentumDeviceId = momentumDeviceList[0];
+
+            int remoteDebugProxy_ = momentumDeviceId.Value<Int32>();
+
+            var remoteDebugProxy =(remoteDebugProxy_ + 2000).ToString();
 
             AppiumOptions caps = new AppiumOptions();
             Dictionary<string, object> momentumOptions = new Dictionary<string, object>();
@@ -49,6 +55,7 @@ namespace Appium
             caps.AddAdditionalCapability("appium:app", momentumApp);
             caps.AddAdditionalCapability("appium:fullReset", true);
             caps.AddAdditionalCapability("appium:noReset", false);
+            caps.AddAdditionalCapability("appium:remoteDebugProxy", remoteDebugProxy);
             momentumOptions.Add("user",momentumUser);
             momentumOptions.Add("token", momentumToken);
             momentumOptions.Add("gw", momentumDeviceId);
@@ -61,7 +68,7 @@ namespace Appium
         public void TestFirstIOS()
         {
                 WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-                wait.Until(e => e.FindElement(By.XPath("(//*[contains(@label , '2')])[1]"))).Click();
+                wait.Until(e => e.FindElement(By.XPath("(//*[contains(@label , '2') or contains(@name , '2') or contains(@value , '2')])[1]"))).Click();
                 Thread.Sleep(1000);
                 driver.FindElement(By.XPath("//XCUIElementTypeButton[@name='+']")).Click();
                 driver.FindElement(By.XPath("//XCUIElementTypeButton[@name='5']")).Click();
