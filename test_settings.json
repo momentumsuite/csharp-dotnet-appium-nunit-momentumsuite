@@ -10,7 +10,7 @@
        "android" : {
             "momentumApp": "ms://<hashed-app-id>",
             "momentumDeviceList": [9999]
-            }
+            }  
     },
    
     "LOCAL" : {

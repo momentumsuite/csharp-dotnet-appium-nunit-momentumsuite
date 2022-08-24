@@ -5,3 +5,4 @@ bin
 obj
 packages
 .vscode/*
+test_settings.json

@@ -40,9 +40,9 @@ namespace Appium
             JArray momentumDeviceList = (JArray)myJObject["CLOUD"]["ios"]["momentumDeviceList"];
             JToken momentumDeviceId = momentumDeviceList[0];
 
-            int remoteDebugProxy_ = momentumDeviceId.Value<Int32>();
+            int remoteDebugProxy_ = momentumDeviceId.Value<Int32>(); 
 
-            var remoteDebugProxy =(remoteDebugProxy_ + 2000).ToString();
+            var remoteDebugProxy =(remoteDebugProxy_ + 2000).ToString(); 
 
             AppiumOptions caps = new AppiumOptions();
             Dictionary<string, object> momentumOptions = new Dictionary<string, object>();
